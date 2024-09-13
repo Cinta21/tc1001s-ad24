@@ -67,6 +67,11 @@ def draw():
     color('black')
     write(f'Clics: {state["clicks"]}', font=('Arial', 18, 'normal'))
 
+    if all(not hidden for hidden in hide):
+        goto(0, 0)
+        color('green')
+        write("¡Juego completado!", align='center', font=('Arial', 30, 'normal'))
+
     update()
     ontimer(draw, 100)
 
