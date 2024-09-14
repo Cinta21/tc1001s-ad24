@@ -2,6 +2,10 @@ from turtle import *
 from random import randrange, choice
 from freegames import square, vector
 
+colores = ['blue', 'purple', 'yellow', 'orange', 'pink']
+
+snake_color = choice(colores)
+food_color = choice([color for color in colores if color != snake_color])
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
